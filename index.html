@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Mi Emprendimiento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+  <div class="header-contenido">
+
+    <div class="logo-texto">
+      <h1>Becerros</h1>
+      <span class="badge">SUSHI</span>
+    </div>
+
+  
+
+  </div>
+</header>
+<section class="novedades">
+  <div class="contenedor-novedades">
+
+    <h2 class="titulo-nuevo">🔥 Lo Más Nuevo 🔥</h2>
+
+    <div class="card-nuevo">
+      <span class="etiqueta">NUEVO</span>
+
+      <img src="n.jpeg" alt="Nuevo Rollo">
+
+      <h3>🚨 Nueva Presentación de nuestros Rolls  🚨</h3>
+      <p class="descripcion">Porque lo bueno se mejora… y lo delicioso se reinventa 🤭🍣 <br>¿Ya sabes cuál vas a probar primero? 👀🔥</p>
+      <p class="precio">$60 (6pz)</p>
+    </div>
+
+  </div>
+</section>
+<div class="card-nuevo">
+
+  <button onclick="toggleMenu()" id="btnMenu" class="btn-menu">
+    HAZ CLICK AQUÍ PARA CONOCER NUESTRO MENÚ
+  </button>
+
+  <div id="menuOculto" class="menu-oculto">
+    <img src="menu.jpeg" alt="Menú">
+  </div>
+
+</div>
+
+</div>
+  <section class="contenedor">
+
+    <div class="producto">
+      <img src="rpe.jpeg" alt="Roll de Pollo Empanizado">
+      <h3>Roll de Pollo Empanizado</h3>
+      <p class="precio">$120 (12pz) <br> $60 (6pz)</p>
+    </div>
+
+    <div class="producto">
+      <img src="rre.jpeg" alt="Roll de Res Empanizado">
+      <h3>Roll de Res Empanizado</h3>
+      <p class="precio">$120 (12pz) <br> $60 (6pz)</p>
+    </div>
+
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menuOculto");
+    const boton = document.getElementById("btnMenu");
+
+    if (menu.style.maxHeight) {
+      menu.style.maxHeight = null;
+      boton.textContent = "HAZ CLICK AQUÍ PARA CONOCER NUESTRO MENÚ";
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      boton.textContent = "OCULTAR MENÚ";
+    }
+  }
+</script>
+</script>
+</body>
+</html>
