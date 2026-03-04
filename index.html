@@ -10,6 +10,7 @@
   <title>Mi Emprendimiento</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header class="header">
@@ -32,15 +33,15 @@
     <div class="card-nuevo">
       <span class="etiqueta">NUEVO</span>
 
-      <img src="n.jpeg" alt="Nuevo Rollo">
+      <img src="NUEVO.jpeg" >
 
-      <h3>🚨 Nueva Presentación de nuestros Rolls  🚨</h3>
-      <p class="descripcion">Porque lo bueno se mejora… y lo delicioso se reinventa 🤭🍣 <br>¿Ya sabes cuál vas a probar primero? 👀🔥</p>
-      <p class="precio">$60 (6pz)</p>
+      <h3>🚨 PROXIMAMENTE...🚨</h3>
+      <p class="descripcion">Crujiente por fuera, corazón de sabor por dentro. <br> Muy pronto nuestro nuevo Onigiri. 🍙✨</p>
     </div>
 
   </div>
 </section>
+
 <div class="card-nuevo">
 
   <button onclick="toggleMenu()" id="btnMenu" class="btn-menu">
@@ -48,10 +49,31 @@
   </button>
 
   <div id="menuOculto" class="menu-oculto">
-    <img src="menu.jpeg" alt="Menú">
+    <img src="menu2.jpeg" alt="Menú">
   </div>
 
 </div>
+
+<section class="custom-box">
+  <h2>🔥 ¿Antojo diferente?</h2>
+  <p>
+    Aquí tú mandas. Personaliza cualquier rollito:
+    ingredientes, forma, nivel de picante y más.
+  </p>
+  <a href="https://www.instagram.com/becerrosushi" target="_blank" class="btn-instagram">
+  Quiero mi rollo personalizado 🍣
+</a>
+</section>
+<section class="productos">
+
+  <h2 class="titulo-seccion"> 🔥 Los mas populares 🔥</h2>
+  <div class="linea"></div>
+
+  <div class="contenedor-productos">
+    <!-- aquí tus productos -->
+  </div>
+
+</section>
 
 </div>
   <section class="contenedor">
@@ -59,17 +81,18 @@
     <div class="producto">
       <img src="rpe.jpeg" alt="Roll de Pollo Empanizado">
       <h3>Roll de Pollo Empanizado</h3>
-      <p class="precio">$120 (12pz) <br> $60 (6pz)</p>
+      <p class="descripcion">El favorito de la casa 💥 Crujiente por fuera, suave por dentro y con ese sabor que siempre se antoja. No es casualidad que sea de los más pedidos…</p>
     </div>
 
     <div class="producto">
       <img src="rre.jpeg" alt="Roll de Res Empanizado">
-      <h3>Roll de Res Empanizado</h3>
-      <p class="precio">$120 (12pz) <br> $60 (6pz)</p>
+      <h3>Roll Mixto</h3>
+      <p class="descripcion">Una combinación perfecta de sabores que no te puedes perder. ¡Ideal para los indecisos! 🍣✨</p>
     </div>
-
+  </section>
 
 <script>
+  
   function toggleMenu() {
     const menu = document.getElementById("menuOculto");
     const boton = document.getElementById("btnMenu");
@@ -83,6 +106,42 @@
     }
   }
 </script>
+
+<section class="reseñas">
+
+  <h2 class="titulo-seccion">RESEÑAS</h2>
+
+  <form id="formReseña" class="form-reseña">
+    <input type="text" id="nombre" placeholder="Tu nombre" required />
+    <textarea id="mensaje" placeholder="Escribe tu reseña..." required></textarea>
+    <button type="submit">Publicar</button>
+  </form>
+
+  <div id="muroReseñas" class="muro"></div>
+
+</section>
+<script>
+const form = document.getElementById("formReseña");
+const muro = document.getElementById("muroReseñas");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre").value;
+  const mensaje = document.getElementById("mensaje").value;
+
+  const nuevaBurbuja = document.createElement("div");
+  nuevaBurbuja.classList.add("burbuja");
+
+  nuevaBurbuja.innerHTML = `
+    <strong>${nombre}</strong>
+    <span>${mensaje}</span>
+  `;
+
+  muro.appendChild(nuevaBurbuja);
+
+  form.reset();
+});
 </script>
 </body>
 </html>
